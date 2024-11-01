@@ -1,0 +1,101 @@
+body {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-family: 'Franklin Gothic Medium';
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+    min-width: 400px;
+    height: 100vh;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 400px;
+    padding: 30px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    background: linear-gradient(to right, #c074ec, #ce03c4);
+}
+
+label {
+    font-family: 'Franklin Gothic Medium';
+    display: block;
+}
+textarea {
+    resize: none;
+}
+input,
+textarea {
+    font-family: 'Franklin Gothic Medium';
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 2px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 8px;
+    transition: transform 0.4s ease-in-out;
+}
+input:focus,
+textarea:focus {
+    transform: scale(1.05);
+    border-color: #00e1ff;
+    outline: none;
+}
+
+button {
+    width: 10em;
+    font-family: 'Franklin Gothic Medium';
+    background: linear-gradient(to left, #6f92f1, #ce03c4);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    border: 2px solid #ccc;
+    transition: transform 0.4s ease-in-out;
+}
+button:hover {
+    transform: scale(1.1);
+}
+
+.success-message,
+.error-message {
+    font-family: 'Franklin Gothic Medium';
+    position: relative;
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 10px;
+    opacity: 1;
+    transition: opacity 2s ease-in-out;
+}
+
+.success-message {
+    background: linear-gradient(to left, #56e67a, #0add1c);
+    color: black;
+}
+
+.error-message {
+    background-color: #f44336;
+    color: black;
+    text-transform: uppercase;
+}
+
+.success-message {
+    animation: fadeOut 5s linear forwards;
+}
+
+.error-message {
+    animation: fadeOut 10s linear forwards;
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
